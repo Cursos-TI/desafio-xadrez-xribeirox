@@ -23,6 +23,20 @@ int main() {
         r++;
     } while (r < 8);
 
+    //CAVALO  (2 casas pra baixo e 1 esquerda) - aninhado
+    printf("\n Movimento do Cavalo:\n");
+
+    for (int he = 0; he < 1; he++) {
+        
+        int hb = 0;
+        while (hb < 2) {
+            printf("Baixo\n");
+            hb++;
+        }
+
+        printf("Esquerda\n");
+    }
+
     return 0;
 }
 
