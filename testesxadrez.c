@@ -45,19 +45,20 @@ int main() {
     printf("\nMovimento da Rainha:\n");
     moverrainha(8);
 
-    //CAVALO  (2 casas pra baixo e 1 esquerda) - aninhado
+    //CAVALO  (2 casas pra cima e 1 direita) - aninhado
     printf("\n Movimento do Cavalo:\n");
 
-    for (int i = 0; i < 5; i++) {  // Loop externo (repetido 5 vezes)
-        printf("Cima, ");
+    for (int i = 0; i < 5; i++) {  // Loop externo (5 vezes)
         
-        for (int j = 0; j < 1; j++) {  // Loop interno (duas repetições para "Cima")
+        for (int j = 0; j < 2; j++) {  // Loop interno (duas repetições para "Cima")
             printf("Cima, ");
+            
+            if (j == 1) {  // Após duas subidas, o cavalo move para a direita
+                printf("Direita\n");
+                break;
+            }
         }
-        
-        printf("Direita\n");  // Após as duas subidas, o cavalo vai para a direita
     }
-
     return 0;
 }
 
